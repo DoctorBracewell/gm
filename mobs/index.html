@@ -1480,13 +1480,6 @@
 				  <label for="soundRandomPitch" class="soundPitch"><strong>Pitch</strong> <input autocomplete="off" type="number" value="1" min="0.5" max="2" name="soundHurtPitch" step="0.1" id="soundRandomPitch"></label>
 				  <button class="playSound" onClick="playRandom()"><i class="fa fa-play" style="font-size:24px"></i></button>
 				 </p>
-				 <div class="centreButtons"><button class="playSound" onClick="
-					if (typeof audio !== 'undefined') {
-					  audio.pause();
-					  audio.currentTime = 0;
-					}
-					">⬛</button></div>
-				 <br />
 				 
 				<div id="elementDam" class="short">
 				<p><label for="waterDam"><strong><span style="color:#55FFFF">❉</span> Water Damage</strong> <input autocomplete="off" type="text" id="waterDam" placeholder="100-200" name="waterDam"></label></p>

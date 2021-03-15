@@ -380,48 +380,71 @@ function createSpell() {
     spellsActive = true
 }
 
+let AudioContext = window.AudioContext || window.webkitAudioContext;
+let audioCtx = new AudioContext();
+
+
 function playHurt() {
+    audioCtx.resume();
+    
     var soundFile = document.getElementById("soundHurt").value;
     var playRate = document.getElementById("soundHurtPitch").value;
-    if (playRate < 0.5) {
-        playRate = 0.5;
-    } else if (playRate > 2) {
-        playRate = 2;
-    }
-    window.audio = new Audio(soundFile);
-    audio.pitchShift;
-    audio.playbackRate = playRate;
-    audio.play();
+    playRate = Math.min(Math.max(parseFloat(playRate), 0.5), 2);
+
+    let source = audioCtx.createBufferSource();
+    
+    fetch(new Request(soundFile)).then(responseSound => {
+        return responseSound.arrayBuffer();
+    }).then(soundBuffer => {
+        audioCtx.decodeAudioData(soundBuffer, decodedData => {
+            source.buffer = decodedData;
+            source.playbackRate.value = playRate;
+            source.connect(audioCtx.destination);
+            source.start(0);
+        });
+    });
 }
 
 function playDeath() {
+    audioCtx.resume();
+    
     var soundFile = document.getElementById("soundDeath").value;
     var playRate = document.getElementById("soundDeathPitch").value;
-    if (playRate < 0.5) {
-        playRate = 0.5;
-    } else if (playRate > 2) {
-        playRate = 2;
-    }
-    window.audio = new Audio(soundFile);
-    audio.mozPreservesPitch = false;
-    audio.webkitPreservesPitch = false;
-    audio.playbackRate = playRate;
-    audio.play();
+    playRate = Math.min(Math.max(parseFloat(playRate), 0.5), 2);
+
+    let source = audioCtx.createBufferSource();
+    
+    fetch(new Request(soundFile)).then(responseSound => {
+        return responseSound.arrayBuffer();
+    }).then(soundBuffer => {
+        audioCtx.decodeAudioData(soundBuffer, decodedData => {
+            source.buffer = decodedData;
+            source.playbackRate.value = playRate;
+            source.connect(audioCtx.destination);
+            source.start(0);
+        });
+    });
 }
 
 function playRandom() {
+    audioCtx.resume();
+    
     var soundFile = document.getElementById("soundRandom").value;
     var playRate = document.getElementById("soundRandomPitch").value;
-    if (playRate < 0.5) {
-        playRate = 0.5;
-    } else if (playRate > 2) {
-        playRate = 2;
-    }
-    window.audio = new Audio(soundFile);
-    audio.mozPreservesPitch = false;
-    audio.webkitPreservesPitch = false;
-    audio.playbackRate = playRate;
-    audio.play();
+    playRate = Math.min(Math.max(parseFloat(playRate), 0.5), 2);
+
+    let source = audioCtx.createBufferSource();
+    
+    fetch(new Request(soundFile)).then(responseSound => {
+        return responseSound.arrayBuffer();
+    }).then(soundBuffer => {
+        audioCtx.decodeAudioData(soundBuffer, decodedData => {
+            source.buffer = decodedData;
+            source.playbackRate.value = playRate;
+            source.connect(audioCtx.destination);
+            source.start(0);
+        });
+    });
 }
 
 hideStuff();
