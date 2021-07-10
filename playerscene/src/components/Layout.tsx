@@ -1,5 +1,7 @@
-import { Box, Grid, Paper } from "@material-ui/core";
+import { Box, Button, Grid, Paper } from "@material-ui/core";
 import PageTypography from "./PageTypography";
+import Options from "./Options";
+
 export default function Layout() {
   return (
     <Box m={3}>
@@ -15,10 +17,19 @@ export default function Layout() {
         </Grid>
 
         {/* Second row */}
-        <Grid item xs={12} md={6}>
-          <Box>
-            <Paper elevation={2}>1</Paper>
-          </Box>
+        <Grid item container xs={12} md={6} spacing={3}>
+          <Grid item xs={12}>
+            <Options></Options>
+          </Grid>
+          <Grid item container xs={12}>
+            <Box mx="auto" my={5}>
+              <Button color="primary" variant="contained" size="large">
+                <Box p={5} style={{ fontSize: "2em" }}>
+                  Make the magic happen
+                </Box>
+              </Button>
+            </Box>
+          </Grid>
         </Grid>
         <Grid item xs={12} md={6}>
           <Box>
