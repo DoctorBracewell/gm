@@ -241,7 +241,7 @@ function generateYaml() {
         endYaml += "potionid: " + $("#potionId").val();
     } else if (document.getElementById("mobType").value === 'sheep') {
         endYaml += "sheared: " + $("#sheepShear").val() + newLine;
-        endYaml += "color: " + $("#sheepColour").val();
+        endYaml += "colour: " + $("#sheepColour").val();
     } else if (document.getElementById("mobType").value === 'skeleton') {
         endYaml += "stray: " + $("#stray").val();
     } else if (document.getElementById("mobType").value === 'slime') {
