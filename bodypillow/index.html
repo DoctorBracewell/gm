@@ -15,7 +15,7 @@
         margin: 0;
         font-size: 1.05em;
       }
-      p,
+      .text p,
       li {
         max-width: clamp(350px, 40vw, 600px);
       }
@@ -33,7 +33,8 @@
       .output-box {
         border: 3px solid black;
         padding: 20px;
-        margin: 10px clamp(100px, 30vw, 350px);
+        margin: 10px clamp(350px, 30vw, 350px);
+        word-break: break-all;
       }
       .progress {
         height: 100vh;
@@ -84,7 +85,7 @@
 
     <div class="flex flex-column">
       <h1>Important Information!</h1>
-      <div>
+      <div class="text">
         <p>
           Welcome to DrBracewell's BodyPillow Generator™. If you have ever
           wanted an in-game model of player, you're in the right place!
