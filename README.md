@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Wynncraft GameMaster Tools 👋</h1>
+<h1 align="center">Wynncraft GameMaster Tools</h1>
 <p>
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
