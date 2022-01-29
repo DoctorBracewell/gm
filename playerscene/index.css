@@ -1,5 +1,6 @@
 /* Body setup + grid */
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -18,11 +19,11 @@ html, body {
 }
 
 .boolean-view {
-  transition: .2s all;
+  transition: 0.2s all;
 }
 .boolean-true:checked ~ .boolean-display .true {
- background-color: #0275d8 !important;
- color: white !important;
+  background-color: #0275d8 !important;
+  color: white !important;
 }
 .boolean-false:checked ~ .boolean-display .false {
   background-color: #0275d8 !important;
@@ -33,7 +34,7 @@ html, body {
   min-height: auto;
 }
 .delete-button {
-  transition: .3s all;
+  transition: 0.3s all;
   font-size: 1.7em;
 }
 .delete-button:hover {

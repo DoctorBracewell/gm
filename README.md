@@ -9,16 +9,19 @@
 
 ### 🏠 [Homepage](https://brace.dev/gm)
 
-## Author
+## Authors
 
 👤 **DrBracewell**
 
-* Website: https://www.brace.dev
-* Github: [@DoctorBracewell](https://github.com/DoctorBracewell)
+- Website: https://www.brace.dev
+- Github: [@DoctorBracewell](https://github.com/DoctorBracewell)
+
+👤 **Aucorg**
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

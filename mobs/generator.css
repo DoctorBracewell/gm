@@ -318,7 +318,7 @@ a.elementButton:hover {
   text-transform: uppercase;
   color: #dcdcdc;
   font-size: 17px;
-  transition: .2s
+  transition: 0.2s;
 }
 .donate:hover {
   font-size: 19px;

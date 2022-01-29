@@ -1,5 +1,6 @@
-/* Body setup + grid */
-html, body {
+/* Body setup */
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -11,9 +12,6 @@ html, body {
   height: 100%;
 }
 
-/* Outs */
-.CodeMirror {
-  margin: 10px;
-  height: 100%;
-  width: 100%;
+.link {
+  font-size: 4vw;
 }
